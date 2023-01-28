@@ -38,6 +38,8 @@ function generatePassword() {
       characterSet = characterSet.concat(special);
     }
     // add any selections to the characterSet array
+    //characterSet.add();
+    //message if all answers are no
     if(characterSet.length === 0) {
       alert("You must select at least one set of characters for your password");
     }
@@ -50,9 +52,12 @@ function generatePassword() {
   // generates a password of the desired password length assigning characters from the characterSet
   // at random to the password string
   // then returns the password string
+var index = 0;
+var password = "";
 
 for(var i = 0; i < passwordLength; i++) {
- Math.floor(Math.random(characterSet));
+ index = Math.floor(Math.random() * characterSet.length);
+ password = password + characterSet[index]
 }
 
   return password;
