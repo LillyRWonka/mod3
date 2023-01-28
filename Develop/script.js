@@ -52,7 +52,7 @@ if(confirm("Include special characters?")) {
 
   function randomPass (max) {
 for(var i = 0; i < passwordLength; i++) {
-return Math.floor(Math.random() * max)
+return Math.floor(Math.random() * max);
 }
 }
 console.log(randomPass())
