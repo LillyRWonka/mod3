@@ -50,12 +50,10 @@ if(confirm("Include special characters?")) {
   // at random to the password string
   // then return the password string
 
-  function randomPass (max) {
 for(var i = 0; i < passwordLength; i++) {
-return Math.floor(Math.random() * max);
+ Math.floor(Math.random(characterSet));
 }
-}
-console.log(randomPass())
+
   return password;
 }
 
