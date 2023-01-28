@@ -2,6 +2,8 @@
 var generateBtn = document.querySelector("#generate");
 var uppercase = [ "A", "B", "C"];
 var lowercase = [ "a", "b", "c"];
+var numbers = [ "1", "2", "3"];
+var special = ["!", "&", "#"]
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -48,6 +50,12 @@ if(confirm("Include special characters?")) {
   // at random to the password string
   // then return the password string
 
+  function randomPass (max) {
+for(var i = 0; i < passwordLength; i++) {
+return Math.floor(Math.random() * max)
+}
+}
+console.log(randomPass())
   return password;
 }
 
