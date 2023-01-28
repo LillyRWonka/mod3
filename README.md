@@ -13,7 +13,7 @@ N/A
 This page can be used to generate a random password, with options to include specials characters and different cases.
 
 The final image should always looks like this:
-![mockup of website](/assets/images/01-html-css-git-homework-demo.png)
+![mockup of website](/Assets/03-javascript-siteLR.png)
 
 ## Credits
 N/A
