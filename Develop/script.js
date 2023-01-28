@@ -23,10 +23,17 @@ function generatePassword() {
       characterSet = characterSet.concat(uppercase);
     }
     // lowercase?
-
+if(confirm("Include lowercase characters?")) {
+      characterSet = characterSet.concat(lowercase);
+    }
     // numbers?
+    if(confirm("Include numbers characters?")) {
+      characterSet = characterSet.concat(numbers);
+    }
     // special characters?
-
+if(confirm("Include special characters?")) {
+      characterSet = characterSet.concat(special);
+    }
     // add any selections to the characterSet array
     if(characterSet.length === 0) {
       alert("You must select at least one set of characters for your password");
