@@ -37,18 +37,12 @@ function generatePassword() {
     if(confirm("Include special characters?")) {
       characterSet = characterSet.concat(special);
     }
-    // add any selections to the characterSet array
-    //characterSet.add();
     //message if all answers are no
     if(characterSet.length === 0) {
       alert("You must select at least one set of characters for your password");
     }
   }
 
-  /* for(var i = 0; i < passwordLength; i++) {
-    choose a character at random from the characterSet array, and then add it to the password string
-    (use a combination of Math.floor() with Math.random())
-  } */
   // generates a password of the desired password length assigning characters from the characterSet
   // at random to the password string
   // then returns the password string
