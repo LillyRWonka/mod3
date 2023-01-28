@@ -4,7 +4,8 @@ var uppercase = [ "A", "B", "C"];
 var lowercase = [ "a", "b", "c"];
 var numbers = [ "1", "2", "3"];
 var special = ["!", "&", "#"]
-// Write password to the #password input
+
+// Writes password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -19,13 +20,13 @@ function generatePassword() {
   var passwordLength = getPasswordLength();
   
   while(characterSet.length === 0) {
-    // ask my questions about what characters to include
+    // asks my questions about what characters to include
     // uppercase?
     if(confirm("Include uppercase characters?")) {
       characterSet = characterSet.concat(uppercase);
     }
     // lowercase?
-if(confirm("Include lowercase characters?")) {
+    if(confirm("Include lowercase characters?")) {
       characterSet = characterSet.concat(lowercase);
     }
     // numbers?
@@ -33,7 +34,7 @@ if(confirm("Include lowercase characters?")) {
       characterSet = characterSet.concat(numbers);
     }
     // special characters?
-if(confirm("Include special characters?")) {
+    if(confirm("Include special characters?")) {
       characterSet = characterSet.concat(special);
     }
     // add any selections to the characterSet array
@@ -46,9 +47,9 @@ if(confirm("Include special characters?")) {
     choose a character at random from the characterSet array, and then add it to the password string
     (use a combination of Math.floor() with Math.random())
   } */
-  // use a for loop to generate a password of the desired password length assigning characters from the characterSet
+  // generates a password of the desired password length assigning characters from the characterSet
   // at random to the password string
-  // then return the password string
+  // then returns the password string
 
 for(var i = 0; i < passwordLength; i++) {
  Math.floor(Math.random(characterSet));
@@ -68,5 +69,5 @@ function getPasswordLength() {
   }
 }
 
-// Add event listener to generate button
+// Adds event listener to generate button
 generateBtn.addEventListener("click", writePassword);
